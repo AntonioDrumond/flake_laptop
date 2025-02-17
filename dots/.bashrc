@@ -13,6 +13,8 @@ alias la='ls -a'
 alias imgcat='wezterm imgcat'
 alias ls='exa --icons --group-directories-first'
 
+# alias nvim="nix run 'github:antoniodrumond/nixvim'"
+
 
 # nerd
-neofetch
+# neofetch

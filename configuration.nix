@@ -109,9 +109,9 @@
 					error_symbol = "[❯](bold bright green)";
 				};
 				nix_shell = {
-          symbol = " ";
-          heuristic = false;
-        };
+					symbol = " ";
+					heuristic = false;
+				};
 				username = {
 					show_always = true;
 					style_user = "green bold";
@@ -170,6 +170,10 @@
 		discord
 		spotify
 
+		#Virtual Machine
+		quickemu
+		spice
+
 		#Hardware/Libs
 		ventoy-full
 		gparted
@@ -178,6 +182,7 @@
 		#Other
 		kdePackages.kcalc
 		cava
+		floorp
   ];
 
   environment.localBinInPath = true;
