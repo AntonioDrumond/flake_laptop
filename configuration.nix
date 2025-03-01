@@ -82,7 +82,7 @@
   users.users.antonio = {
     isNormalUser = true;
     description = "Antonio Drumond";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     packages = with pkgs; [
       kdePackages.kate
     ];
@@ -144,6 +144,7 @@
 		wezterm
 		fzf
 		zip
+		unzip
 		inputs.nixvim.packages.${pkgs.system}.default # NixVim
 
 		#CLI -> Pretty and shiny :D
@@ -151,6 +152,7 @@
 		tree
 		eza # -> better to do in programs. but couldnt yet
 		neofetch
+		superfile
 
 		#Image stuff
 		pix
@@ -171,6 +173,9 @@
 		spotify
 
 		#Virtual Machine
+		virt-manager
+		qemu
+		libvirt
 		quickemu
 		spice
 
@@ -183,9 +188,29 @@
 		kdePackages.kcalc
 		cava
 		floorp
+		jetbrains-mono
   ];
 
-  environment.localBinInPath = true;
+	# VM Settings
+	virtualisation.libvirtd = {
+		enable = true;
+		qemu = {
+			package = pkgs.qemu_kvm;
+			runAsRoot = true;
+			swtpm.enable = true;
+			/*
+			ovmf = {
+				enable = true;
+				packages = [(pkgs.OVMF.override {
+					secureBoot = true;
+					tpmSupport = true;
+				}).fd];
+			};
+		*/
+		};
+	};
+
+	environment.localBinInPath = true;
 
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
