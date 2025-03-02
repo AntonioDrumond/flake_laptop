@@ -34,7 +34,7 @@
   services.xserver.enable = true;
   services.xserver.wacom.enable = true;
 
-  # # Enable the KDE Plasma Desktop Environment.
+  # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
@@ -161,7 +161,7 @@
 
 		#Non raw text
 		obsidian
-		calibre
+		foliate
 
 		#Torrenting and stuff
 		# qbittorrent
@@ -173,9 +173,9 @@
 		spotify
 
 		#Virtual Machine
-		virt-manager
-		qemu
-		libvirt
+		# virt-manager
+		# qemu
+		# libvirt
 		quickemu
 		spice
 
@@ -191,6 +191,7 @@
 		jetbrains-mono
   ];
 
+	/*
 	# VM Settings
 	virtualisation.libvirtd = {
 		enable = true;
@@ -198,17 +199,9 @@
 			package = pkgs.qemu_kvm;
 			runAsRoot = true;
 			swtpm.enable = true;
-			/*
-			ovmf = {
-				enable = true;
-				packages = [(pkgs.OVMF.override {
-					secureBoot = true;
-					tpmSupport = true;
-				}).fd];
-			};
-		*/
 		};
 	};
+	*/
 
 	environment.localBinInPath = true;
 
