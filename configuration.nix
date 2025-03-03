@@ -1,16 +1,21 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   imports = [
-		./hardware-configuration.nix
-	];
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-	networking.hostName = "nixos";
-	networking.networkmanager.enable = true;
+  networking.hostName = "nixos";
+  networking.networkmanager.enable = true;
 
   # Set your time zone.
   time.timeZone = "America/Sao_Paulo";
@@ -52,8 +57,8 @@
 
   # Bluetooth
   hardware.bluetooth = {
-	  enable = true;
-	  powerOnBoot = true;
+    enable = true;
+    powerOnBoot = true;
   };
 
   # Enable sound
@@ -74,7 +79,10 @@
     options snd-intel-dspcfg dsp_driver=1
   '';
 
-	nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -82,135 +90,140 @@
   users.users.antonio = {
     isNormalUser = true;
     description = "Antonio Drumond";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "libvirtd"
+    ];
     packages = with pkgs; [
       kdePackages.kate
     ];
   };
 
   programs = {
-		# Firefox
+    # Firefox
     firefox.enable = true;
 
-		# Steam
-		steam = {
-			enable = true;
-			remotePlay.openFirewall = true;
-		};
+    # Steam
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true;
+    };
 
-		# Starship
-		starship = {
-			enable = true;
-			settings = {
-				add_newline = true;
-				# "$schema" = "https://starship.rs/config-schema.json";
-				character = {
-					success_symbol = "[❯](bold green)";
-					error_symbol = "[❯](bold bright green)";
-				};
-				nix_shell = {
-					symbol = " ";
-					heuristic = false;
-				};
-				username = {
-					show_always = true;
-					style_user = "green bold";
-					style_root = "bright-red bold";
-				};
-				os.disabled = false;
-				# palette = "catppuccin_${"mocha"}";
-			};
-		};
+    # Starship
+    starship = {
+      enable = true;
+      settings = {
+        add_newline = true;
+        # "$schema" = "https://starship.rs/config-schema.json";
+        character = {
+          success_symbol = "[❯](bold green)";
+          error_symbol = "[❯](bold bright green)";
+        };
+        nix_shell = {
+          symbol = " ";
+          heuristic = false;
+        };
+        username = {
+          show_always = true;
+          style_user = "green bold";
+          style_root = "bright-red bold";
+        };
+        os.disabled = false;
+        # palette = "catppuccin_${"mocha"}";
+      };
+    };
 
-		/*
-		# Eza (Exa) ((Better ls))
-		eza = {
-			enable = true;
-			enableZshIntegration = true;
-		};
-		*/
+    /*
+      		# Eza (Exa) ((Better ls))
+      		eza = {
+      			enable = true;
+      			enableZshIntegration = true;
+      		};
+    */
 
-	};
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-	# Global system packages
+  # Global system packages
   environment.systemPackages = with pkgs; [
 
-		#CLI -> Essential
-		vim
-		git
-		wezterm
-		fzf
-		zip
-		unzip
-		inputs.nixvim.packages.${pkgs.system}.default # NixVim
+    #CLI -> Essential
+    vim
+    git
+    wezterm
+    fzf
+    zip
+    unzip
+    inputs.nixvim.packages.${pkgs.system}.default # NixVim
 
-		#CLI -> Pretty and shiny :D
-		bat
-		tree
-		eza # -> better to do in programs. but couldnt yet
-		neofetch
-		superfile
+    #CLI -> Pretty and shiny :D
+    bat
+    tree
+    eza # -> better to do in programs. but couldnt yet
+    neofetch
+    superfile
 
-		#Image stuff
-		pix
-		rawtherapee
-		krita
+    #Image stuff
+    pix
+    rawtherapee
+    krita
 
-		#Non raw text
-		obsidian
-		foliate
+    #Non raw text
+    obsidian
+    foliate
 
-		#Torrenting and stuff
-		# qbittorrent
-		# mullvad
+    #Torrenting and stuff
+    # qbittorrent
+    # mullvad
 
-		#Nonfree entertainment
-		stremio
-		discord
-		spotify
+    #Nonfree entertainment
+    stremio
+    discord
+    spotify
 
-		#Virtual Machine
-		# virt-manager
-		# qemu
-		# libvirt
-		quickemu
-		spice
+    #Virtual Machine
+    # virt-manager
+    # qemu
+    # libvirt
+    quickemu
+    spice
 
-		#Hardware/Libs
-		ventoy-full
-		gparted
-		fan2go
+    #Hardware/Libs
+    ventoy-full
+    gparted
+    fan2go
 
-		#Other
-		kdePackages.kcalc
-		cava
-		floorp
-		jetbrains-mono
+    #Other
+    kdePackages.kcalc
+    cava
+    floorp
+    librewolf-bin
+    jetbrains-mono
   ];
 
-	/*
-	# VM Settings
-	virtualisation.libvirtd = {
-		enable = true;
-		qemu = {
-			package = pkgs.qemu_kvm;
-			runAsRoot = true;
-			swtpm.enable = true;
-		};
-	};
-	*/
+  /*
+    	# VM Settings
+    	virtualisation.libvirtd = {
+    		enable = true;
+    		qemu = {
+    			package = pkgs.qemu_kvm;
+    			runAsRoot = true;
+    			swtpm.enable = true;
+    		};
+    	};
+  */
 
-	environment.localBinInPath = true;
+  environment.localBinInPath = true;
 
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-	# DO NOT CHANGE
+  # DO NOT CHANGE
   system.stateVersion = "24.05"; # Did you read the comment?
 
 }
