@@ -4,9 +4,9 @@ alias ff='cd $(find * -type d | fzf)'
 alias vzf='vi $(fzf)'
 
 # OS Utils
-alias nixconf='sudo -E vim /etc/nixos/configuration.nix'
-alias rebSwitch='sudo nixos-rebuild switch --flake ~/repos/flake/'
-alias rebBoot='sudo nixos-rebuild boot --flake ~/repos/flake/'
+# alias nixconf='sudo -E vim /etc/nixos/configuration.nix'
+alias rebSwitch='sudo nixos-rebuild switch --flake ~/repos/flake_laptop/'
+alias rebBoot='sudo nixos-rebuild boot --flake ~/repos/flake_laptop/'
 
 # Other
 alias la='ls -a'

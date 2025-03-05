@@ -134,14 +134,6 @@
       };
     };
 
-    /*
-      		# Eza (Exa) ((Better ls))
-      		eza = {
-      			enable = true;
-      			enableZshIntegration = true;
-      		};
-    */
-
   };
 
   # Allow unfree packages
@@ -185,9 +177,6 @@
     spotify
 
     #Virtual Machine
-    # virt-manager
-    # qemu
-    # libvirt
     quickemu
     spice
 
@@ -203,18 +192,6 @@
     librewolf-bin
     jetbrains-mono
   ];
-
-  /*
-    	# VM Settings
-    	virtualisation.libvirtd = {
-    		enable = true;
-    		qemu = {
-    			package = pkgs.qemu_kvm;
-    			runAsRoot = true;
-    			swtpm.enable = true;
-    		};
-    	};
-  */
 
   environment.localBinInPath = true;
 
