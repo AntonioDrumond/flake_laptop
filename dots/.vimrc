@@ -116,18 +116,18 @@ endfunction
 
 "Enable hex editing mode
 nnoremap <C-x> :call Thex()<CR>
-let t:h = 0
+let t:hex = 0
 fu Thex()
-	if (t:h==#0)
+	if (t:hex==#0)
 		exec "%!xxd"
 	else
 		exec "%!xxd -r"
 	endif
 
-	if (t:h==#0)
-		let t:h = 1
+	if (t:hex==#0)
+		let t:hex = 1
 	else
-		let t:h = 0
+		let t:hex = 0
 	endif
 endfu
 
