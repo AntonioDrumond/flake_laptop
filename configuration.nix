@@ -142,6 +142,12 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 14d";
+  };
+
   # Global system packages
   environment.systemPackages = with pkgs; [
 
