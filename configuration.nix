@@ -193,6 +193,7 @@
     ventoy-full
     gparted
     fan2go
+		zfs_2_3
 
     #Other
     kdePackages.kcalc
