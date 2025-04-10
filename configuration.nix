@@ -201,6 +201,7 @@
     floorp
     librewolf-bin
     jetbrains-mono
+    passmark-performancetest
   ];
 
   environment.localBinInPath = true;
