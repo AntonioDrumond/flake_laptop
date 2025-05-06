@@ -202,6 +202,7 @@
     librewolf-bin
     jetbrains-mono
     passmark-performancetest
+    mars-mips
   ];
 
   environment.localBinInPath = true;
