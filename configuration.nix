@@ -203,6 +203,7 @@
     jetbrains-mono
     passmark-performancetest
     mars-mips
+    jflap
   ];
 
   environment.localBinInPath = true;
