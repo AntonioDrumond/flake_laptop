@@ -199,12 +199,9 @@
     kdePackages.kcalc
     cava
     floorp
-    librewolf-bin
     jetbrains-mono
-    passmark-performancetest
     mars-mips
     jflap
-    zsh
   ];
 
   environment.localBinInPath = true;
