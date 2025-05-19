@@ -204,6 +204,7 @@
     passmark-performancetest
     mars-mips
     jflap
+    zsh
   ];
 
   environment.localBinInPath = true;
