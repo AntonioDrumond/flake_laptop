@@ -1,0 +1,14 @@
+[user]
+	email = adcdstom@gmail.com
+
+[url "https://github.com/"]
+    insteadOf = "gh:"
+
+[url "https://github.com/antoniodrumond"]
+    insteadOf = "ad:"
+
+[url "https://github.com/davipuddo"]
+    insteadOf = "dfp:"
+
+# to cache token:   git config --global credential.helper cache
+# to uncache token: git config --global --unset credential.helper
