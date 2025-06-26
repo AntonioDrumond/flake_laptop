@@ -202,6 +202,7 @@
     jetbrains-mono
     mars-mips
     jflap
+    mysql84
   ];
 
   environment.localBinInPath = true;
