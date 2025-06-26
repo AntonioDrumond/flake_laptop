@@ -203,6 +203,7 @@
     mars-mips
     jflap
     mysql84
+    mysql-workbench
   ];
 
   environment.localBinInPath = true;
