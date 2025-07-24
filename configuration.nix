@@ -35,18 +35,16 @@
     LC_TIME = "pt_BR.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-  services.xserver.wacom.enable = true;
-
-  # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-
-  # Configure keymap in X11
-  services.xserver = {
-    xkb.layout = "br";
-    xkb.variant = "nodeadkeys";
+  # Configure X11
+  services = {
+    displayManager.sddm.enable = true;
+    desktopManager.plasma6.enable = true;
+    xserver = {
+      enable = true;
+      wacom.enable = true;
+      xkb.layout = "br";
+      xkb.variant = "nodeadkeys";
+    };
   };
 
   # Configure console keymap
@@ -62,12 +60,12 @@
   };
 
   # Enable sound
-  hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
+    pulseaudio.enable = true;
     pulse.enable = true;
     jack.enable = true;
     wireplumber.enable = true;
@@ -140,7 +138,10 @@
   };
 
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+    permittedInsecurePackages = [ "ventoy-1.1.05" ];
+  };
 
   nix.gc = {
     automatic = true;
