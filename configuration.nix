@@ -194,6 +194,7 @@
     ventoy-full
     gparted
     fan2go
+    btop
 
     #Other
     kdePackages.kcalc
