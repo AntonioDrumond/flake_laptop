@@ -61,14 +61,16 @@
 
   # Enable sound
   security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulseaudio.enable = true;
-    pulse.enable = true;
-    jack.enable = true;
-    wireplumber.enable = true;
+  services = {
+    # pulseaudio.enable = true;
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      jack.enable = true;
+      wireplumber.enable = true;
+    };
   };
 
   # Audio fix
@@ -207,11 +209,6 @@
   ];
 
   environment.localBinInPath = true;
-
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   # DO NOT CHANGE
   system.stateVersion = "24.11"; # Did you read the comment?
