@@ -161,6 +161,8 @@
     fzf
     zip
     unzip
+    rar
+    unrar
     inputs.nixvim.packages.${pkgs.system}.default # NixVim
 
     #CLI -> Pretty and shiny :D
