@@ -163,7 +163,8 @@
     unzip
     rar
     unrar
-    inputs.nixvim.packages.${pkgs.system}.default # NixVim
+		neovim
+    # inputs.nixvim.packages.${pkgs.system}.default # NixVim
 
     #CLI -> Pretty and shiny :D
     bat

@@ -2,9 +2,10 @@
   description = "NixOS System Flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    stable.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    nixvim.url = "github:AntonioDrumond/nixvim";
+    # nixvim.url = "github:AntonioDrumond/nixvim";
   };
 
   outputs =
