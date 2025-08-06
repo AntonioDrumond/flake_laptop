@@ -164,6 +164,7 @@
     rar
     unrar
 		neovim
+		kitty
     # inputs.nixvim.packages.${pkgs.system}.default # NixVim
 
     #CLI -> Pretty and shiny :D
@@ -209,6 +210,7 @@
     jetbrains-mono
     mars-mips
     jflap
+		android-studio-full
   ];
 
   environment.localBinInPath = true;
