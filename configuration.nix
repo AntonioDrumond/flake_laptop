@@ -143,7 +143,11 @@
   nixpkgs.config = {
     allowUnfree = true;
     permittedInsecurePackages = [ "ventoy-1.1.05" ];
+		# Necessary for android studio
+		android_sdk.accept_license = true;
   };
+
+
 
   nix.gc = {
     automatic = true;
@@ -210,7 +214,7 @@
     jetbrains-mono
     mars-mips
     jflap
-		android-studio-full
+		# android-studio-full
   ];
 
   environment.localBinInPath = true;
