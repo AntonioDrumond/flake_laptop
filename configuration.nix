@@ -214,7 +214,7 @@
     jetbrains-mono
     mars-mips
     jflap
-		# android-studio-full
+		android-studio-full
   ];
 
   environment.localBinInPath = true;
