@@ -104,6 +104,12 @@
     # Firefox
     firefox.enable = true;
 
+    hyprland = {
+        enable = true;
+        xwayland.enable = true;
+    };
+    hyprlock.enable = true;
+
     # Steam
     steam = {
       enable = true;
@@ -143,8 +149,8 @@
   nixpkgs.config = {
     allowUnfree = true;
     permittedInsecurePackages = [ "ventoy-1.1.05" ];
-		# Necessary for android studio
-		android_sdk.accept_license = true;
+    # Necessary for android studio
+    android_sdk.accept_license = true;
   };
 
 
@@ -167,9 +173,15 @@
     unzip
     rar
     unrar
-		kitty
-		# neovim
+    kitty
+    # neovim
     # inputs.nixvim.packages.${pkgs.system}.default # NixVim
+
+    # Hyprland
+    waybar
+    hyprcursor
+    hyprshot
+    hyprpaper
 
     #CLI -> Pretty and shiny :D
     bat
@@ -214,7 +226,7 @@
     jetbrains-mono
     mars-mips
     jflap
-		android-studio-full
+    android-studio-full
   ];
 
   environment.localBinInPath = true;
