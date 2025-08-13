@@ -179,7 +179,7 @@ in {
           # name = "tokyonight";
           name = "catpuccin";
           # style = "night";
-          style = "mocha"
+          style = "mocha";
           transparent = false;
         };
 
