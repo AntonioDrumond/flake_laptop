@@ -169,7 +169,7 @@
     unrar
 		kitty
 		# neovim
-    inputs.nixvim.packages.${pkgs.system}.default # NixVim
+    # inputs.nixvim.packages.${pkgs.system}.default # NixVim
 
     #CLI -> Pretty and shiny :D
     bat

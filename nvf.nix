@@ -5,10 +5,10 @@
 # https://notashelf.github.io/nvf/options.html
 {
   config,
-  hostname,
+  # hostname,
   lib,
   pkgs,
-  username,
+  # username,
   inputs,
   ...
 }: let
@@ -17,12 +17,15 @@
   dark-theme = "tokyonight-moon";
 in {
 
+  /*
   imports = [
     inputs.nvf.nixosModules.default
   ];
+  */
 
   config = {
     programs.nvf = {
+			enable = true;
       settings.vim = {
         viAlias = false;
         vimAlias = true;
@@ -33,7 +36,7 @@ in {
         };
 
         spellcheck = {
-          enable = true;
+          enable = false;
           languages = [
             "en"
           ];
@@ -45,7 +48,7 @@ in {
         options = {
           cursorlineopt = "line";
           shiftwidth = 4;
-          scrolloff = 10;
+          scrolloff = 4;
         };
 
         lsp = {
@@ -97,8 +100,8 @@ in {
                 # nixos.expr = self.nixosConfigurations.${hostname}.options;
                 # home-manager.expr = self.homeConfigurations."${username}@${hostname}".options;
                 # nixos.expr = "/home/evolve/nix-config";
-                nixos.expr = "(builtins.getFlake (builtins.toString ./.)).nixosConfigurations.${hostname}.options";
-                home_manager.expr = "(builtins.getFlake (builtins.toString ./.)).homeConfigurations.\"${username}@${hostname}\".options";
+                # nixos.expr = "(builtins.getFlake (builtins.toString ./.)).nixosConfigurations.${hostname}.options";
+                # home_manager.expr = "(builtins.getFlake (builtins.toString ./.)).homeConfigurations.\"${username}@${hostname}\".options";
               };
             };
           };
@@ -168,7 +171,7 @@ in {
           lualine = {
             enable = true;
             # theme = "iceberg_dark"; # "catppuccin";
-            theme = "catpuccin";
+            theme = "catppuccin";
           };
         };
 
@@ -177,7 +180,7 @@ in {
         theme = {
           enable = true;
           # name = "tokyonight";
-          name = "catpuccin";
+          name = "catppuccin";
           # style = "night";
           style = "mocha";
           transparent = false;
@@ -240,7 +243,7 @@ in {
         };
 
         tabline = {
-          nvimBufferline.enable = true;
+          nvimBufferline.enable = false;
         };
 
         treesitter.context.enable = maxConfig;
@@ -249,7 +252,7 @@ in {
           whichKey.enable = true;
           cheatsheet.enable = true;
           hardtime-nvim = {
-            enable = true;
+            enable = false;
             setupOpts = {
               max_count = 5;
               restriction_mode = "hint_and_block";
@@ -296,7 +299,8 @@ in {
           vim-wakatime.enable = false;
           diffview-nvim.enable = true;
           yanky-nvim = {
-            enable = maxConfig;
+            enable = false;
+            # enable = maxConfig;
             setupOpts.ring.storage = "sqlite";
           };
           icon-picker.enable = maxConfig;
@@ -375,9 +379,9 @@ in {
             setupOpts = {
               autoload_mode = "CurrentDir";
               autosave_ignore_dirs = [
-                "/home/${username}"
-                "/home/${username}/Downloads"
-                "/home/${username}/tmp"
+                "/home/antonio/"
+                "/home/antonio/Downloads"
+                "/home/antonio/tmp"
               ];
             };
           };
@@ -398,32 +402,40 @@ in {
         keymaps = [
           # telescope colorscheme
           # { key = "<leader>fc"; action = ":Telescope colorscheme<cr>"; mode = ["n" "x"]; silent = true; desc = "Colorscheme [Telescope]"; }
-          { key = "<C-o>"; action = ":Telescope colorscheme<cr>"; mode = ["n" "x"]; silent = true; desc = "Colorscheme [Telescope]"; }
+          { key = "<C-o>"; action = ":Telescope find_files<cr>"; mode = ["n"]; silent = true; desc = "Colorscheme [Telescope]"; }
           { key = "<C-q>"; action = ":w<CR>"; mode = ["n"]; silent = false; }
           { key = "<C-p>"; action = ":wq<CR>"; mode = ["n"]; silent = false; }
           { key = "<C-n>"; action = ":q!<CR>"; mode = ["n"]; silent = false; }
+          { key = "<C-n>"; action = ":q!<CR>"; mode = ["n"]; silent = false; }
+          { key = "jk"; action = "<esc>"; mode = ["i"]; silent = true; }
+          { key = "<space>"; action = "@"; mode = ["n"]; silent = true; }
+          { key = "H"; action = "^"; mode = ["n"]; silent = true; }
+          { key = "L"; action = "$"; mode = ["n"]; silent = true; }
+          { key = "<CR>"; action = "<nop>"; mode = ["n"]; silent = true; }
+            
 
           # yanky-nvim config
-          { key = "p";     action = "<Plug>(YankyPutAfter)";                    mode = ["n" "x"]; silent = true; }
-          { key = "P";     action = "<Plug>(YankyPutBefore)";                   mode = ["n" "x"]; silent = true; }
-          { key = "gp";    action = "<Plug>(YankyGPutAfter)";                   mode = ["n" "x"]; silent = true; }
-          { key = "gP";    action = "<Plug>(YankyGPutBefore)";                  mode = ["n" "x"]; silent = true; }
-          { key = "<c-p>"; action = "<Plug>(YankyPreviousEntry)";               mode = "n";       silent = true; }
-          { key = "<c-n>"; action = "<Plug>(YankyNextEntry)";                   mode = "n";       silent = true; }
-          { key = "]p";    action = "<Plug>(YankyPutIndentAfterLinewise)";      mode = "n";       silent = true; }
-          { key = "[p";    action = "<Plug>(YankyPutIndentBeforeLinewise)";     mode = "n";       silent = true; }
-          { key = "]P";    action = "<Plug>(YankyPutIndentAfterLinewise)";      mode = "n";       silent = true; }
-          { key = "[P";    action = "<Plug>(YankyPutIndentBeforeLinewise)";     mode = "n";       silent = true; }
-          { key = ">p";    action = "<Plug>(YankyPutIndentAfterShiftRight)";    mode = "n";       silent = true; }
-          { key = "<p";    action = "<Plug>(YankyPutIndentAfterShiftLeft)";     mode = "n";       silent = true; }
-          { key = ">P";    action = "<Plug>(YankyPutIndentBeforeShiftRight)";   mode = "n";       silent = true; }
-          { key = "<P";    action = "<Plug>(YankyPutIndentBeforeShiftLeft)";    mode = "n";       silent = true; }
-          { key = "=p";    action = "<Plug>(YankyPutAfterFilter)";              mode = "n";       silent = true; }
-          { key = "=P";    action = "<Plug>(YankyPutBeforeFilter)";             mode = "n";       silent = true; }
+          # { key = "p";     action = "<Plug>(YankyPutAfter)";                    mode = ["n" "x"]; silent = true; }
+                    # { key = "P";     action = "<Plug>(YankyPutBefore)";                   mode = ["n" "x"]; silent = true; }
+          # { key = "gp";    action = "<Plug>(YankyGPutAfter)";                   mode = ["n" "x"]; silent = true; }
+          # { key = "gP";    action = "<Plug>(YankyGPutBefore)";                  mode = ["n" "x"]; silent = true; }
+          # { key = "<c-p>"; action = "<Plug>(YankyPreviousEntry)";               mode = "n";       silent = true; }
+          # { key = "<c-n>"; action = "<Plug>(YankyNextEntry)";                   mode = "n";       silent = true; }
+          # { key = "]p";    action = "<Plug>(YankyPutIndentAfterLinewise)";      mode = "n";       silent = true; }
+          # { key = "[p";    action = "<Plug>(YankyPutIndentBeforeLinewise)";     mode = "n";       silent = true; }
+          # { key = "]P";    action = "<Plug>(YankyPutIndentAfterLinewise)";      mode = "n";       silent = true; }
+          # { key = "[P";    action = "<Plug>(YankyPutIndentBeforeLinewise)";     mode = "n";       silent = true; }
+          # { key = ">p";    action = "<Plug>(YankyPutIndentAfterShiftRight)";    mode = "n";       silent = true; }
+          # { key = "<p";    action = "<Plug>(YankyPutIndentAfterShiftLeft)";     mode = "n";       silent = true; }
+          # { key = ">P";    action = "<Plug>(YankyPutIndentBeforeShiftRight)";   mode = "n";       silent = true; }
+          # { key = "<P";    action = "<Plug>(YankyPutIndentBeforeShiftLeft)";    mode = "n";       silent = true; }
+          # { key = "=p";    action = "<Plug>(YankyPutAfterFilter)";              mode = "n";       silent = true; }
+          # { key = "=P";    action = "<Plug>(YankyPutBeforeFilter)";             mode = "n";       silent = true; }
         ];
       };
     };
 
+    /*
     programs.fish.functions = {
       "nvim" = {
         argumentNames = [ "argv" ];
@@ -436,6 +448,7 @@ in {
         '';
       };
     };
+  */
   };
 
   options = {
