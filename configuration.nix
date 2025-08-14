@@ -198,7 +198,6 @@
     rar
     unrar
     kitty
-    waybar
     killall
     # neovim
     # inputs.nixvim.packages.${pkgs.system}.default # NixVim
@@ -252,6 +251,7 @@
     blueman
 
     #Other
+    git-credential-manager
     kdePackages.kcalc
     cava
     floorp
