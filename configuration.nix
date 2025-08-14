@@ -45,6 +45,17 @@
       xkb.layout = "br";
       xkb.variant = "nodeadkeys";
     };
+    openssh = {
+        enable = false;
+        ports = [ 22 ];
+        settings = {
+            PasswordAuthentication = true;
+            AllowUsers = null;
+            UseDns = true;
+            X11Forwarding = false;
+            PermitRootLogin = "no";
+        }; 
+    };
   };
 
   # Configure console keymap
@@ -153,7 +164,20 @@
     android_sdk.accept_license = true;
   };
 
-
+    fonts.packages = with pkgs; [
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-emoji
+      liberation_ttf
+      fira-code
+      fira-code-symbols
+      mplus-outline-fonts.githubRelease
+      dina-font
+      proggyfonts
+      jetbrains-mono
+      nerd-fonts.jetbrains-mono
+      font-awesome
+    ];
 
   nix.gc = {
     automatic = true;
@@ -174,7 +198,8 @@
     rar
     unrar
     kitty
-    openssh
+    waybar
+    killall
     # neovim
     # inputs.nixvim.packages.${pkgs.system}.default # NixVim
 
@@ -221,12 +246,15 @@
     gparted
     fan2go
     btop
+    pavucontrol
+    brightnessctl
+    playerctl
+    blueman
 
     #Other
     kdePackages.kcalc
     cava
     floorp
-    jetbrains-mono
     mars-mips
     jflap
     android-studio-full
