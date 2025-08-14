@@ -174,6 +174,7 @@
     rar
     unrar
     kitty
+    openssh
     # neovim
     # inputs.nixvim.packages.${pkgs.system}.default # NixVim
 
