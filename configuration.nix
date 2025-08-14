@@ -182,6 +182,8 @@
     hyprcursor
     hyprshot
     hyprpaper
+    hypridle
+    rofi-wayland
 
     #CLI -> Pretty and shiny :D
     bat
