@@ -46,9 +46,11 @@ in {
         searchCase = "smart";
 
         options = {
-          cursorlineopt = "line";
-          shiftwidth = 4;
-          scrolloff = 4;
+            cursorlineopt = "line";
+            shiftwidth = 4;
+            scrolloff = 4;
+            autoindent = true;
+            smartindent = true;
         };
 
         lsp = {
@@ -69,7 +71,8 @@ in {
 
         debugger = {
           nvim-dap = {
-            enable = maxConfig;
+            # enable = maxConfig;
+            enable = false;
             ui.enable = true;
             # sources = {
             #   java = "vscode-extensions.vscjava.vscode-java-pack";
@@ -81,7 +84,7 @@ in {
         # To list all available language module options, please visit the nvf manual.
         lsp.enable = true;
         languages = {
-          enableFormat = true;
+          enableFormat = false;
           enableTreesitter = true;
           enableExtraDiagnostics = true;
 
@@ -130,8 +133,8 @@ in {
           zig.enable = false;
           typst.enable = false;
           rust = {
-            enable = false;
-            crates.enable = false;
+            enable = true;
+            crates.enable = true;
           };
 
           # Language modules that are not as common.
@@ -183,7 +186,7 @@ in {
           name = "catppuccin";
           # style = "night";
           style = "mocha";
-          transparent = false;
+          transparent = true;
         };
 
         startPlugins = [
@@ -402,16 +405,18 @@ in {
         keymaps = [
           # telescope colorscheme
           # { key = "<leader>fc"; action = ":Telescope colorscheme<cr>"; mode = ["n" "x"]; silent = true; desc = "Colorscheme [Telescope]"; }
-          { key = "<C-o>"; action = ":Telescope find_files<cr>"; mode = ["n"]; silent = true; desc = "Colorscheme [Telescope]"; }
-          { key = "<C-q>"; action = ":w<CR>"; mode = ["n"]; silent = false; }
-          { key = "<C-p>"; action = ":wq<CR>"; mode = ["n"]; silent = false; }
-          { key = "<C-n>"; action = ":q!<CR>"; mode = ["n"]; silent = false; }
-          { key = "<C-n>"; action = ":q!<CR>"; mode = ["n"]; silent = false; }
-          { key = "jk"; action = "<esc>"; mode = ["i"]; silent = true; }
-          { key = "<space>"; action = "@"; mode = ["n"]; silent = true; }
-          { key = "H"; action = "^"; mode = ["n"]; silent = true; }
-          { key = "L"; action = "$"; mode = ["n"]; silent = true; }
-          { key = "<CR>"; action = "<nop>"; mode = ["n"]; silent = true; }
+            { key = "<C-o>"; action = ":Telescope find_files<cr>"; mode = ["n"]; silent = true; desc = "Colorscheme [Telescope]"; }
+            { key = "<C-q>"; action = ":w<CR>"; mode = ["n"]; silent = false; }
+            { key = "<C-p>"; action = ":wq<CR>"; mode = ["n"]; silent = false; }
+            { key = "<C-n>"; action = ":q!<CR>"; mode = ["n"]; silent = false; }
+            { key = "<C-n>"; action = ":q!<CR>"; mode = ["n"]; silent = false; }
+            { key = "jk"; action = "<esc>"; mode = ["i"]; silent = true; }
+            { key = "<space>"; action = "@"; mode = ["n"]; silent = true; }
+            { key = "H"; action = "^"; mode = ["n"]; silent = true; }
+            { key = "L"; action = "$"; mode = ["n"]; silent = true; }
+            { key = "<CR>"; action = "<nop>"; mode = ["n"]; silent = true; }
+            { key = "<C-e>"; action = ":Neotree toggle right<CR>"; mode = ["n"]; silent = false; }
+
             
 
           # yanky-nvim config
