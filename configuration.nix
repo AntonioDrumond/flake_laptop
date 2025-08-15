@@ -251,7 +251,7 @@
     blueman
 
     #Other
-    git-credential-manager
+    # git-credential-manager
     kdePackages.kcalc
     cava
     floorp
