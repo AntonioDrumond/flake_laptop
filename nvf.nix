@@ -319,7 +319,7 @@ in {
                 precognition.enable = false;
             };
             images = {
-                image-nvim.enable = true;
+                image-nvim.enable = false;
             };
         };
 
