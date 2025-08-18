@@ -185,6 +185,10 @@
         options = "--delete-older-than 14d";
     };
 
+    # Fix wayland usage
+    environment.sessionVariables.NIXOS_OZONE_WL = "1";
+    environment.sessionVariables.GDK_BACKEND = "wayland,x11";
+
     # Global system packages
     environment.systemPackages = with pkgs; [
 
