@@ -249,11 +249,11 @@ in {
             nvimBufferline.enable = false;
         };
 
-        treesitter.context.enable = maxConfig;
+        treesitter.context.enable =maxConfig;
 
         binds = {
-            whichKey.enable = true;
-            cheatsheet.enable = true;
+            whichKey.enable = false;
+            cheatsheet.enable = false;
             hardtime-nvim = {
                 enable = false;
                 setupOpts = {

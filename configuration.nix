@@ -46,11 +46,11 @@
             xkb.variant = "nodeadkeys";
         };
         openssh = {
-            enable = false;
+            enable = true;
             ports = [ 22 ];
             settings = {
                 PasswordAuthentication = true;
-                AllowUsers = null;
+                AllowUsers = [ "puddo" ];
                 UseDns = true;
                 X11Forwarding = false;
                 PermitRootLogin = "no";
@@ -98,17 +98,29 @@
     # Enable touchpad support (enabled default in most desktopManager).
     # services.xserver.libinput.enable = true;
 
-    users.users.antonio = {
-        isNormalUser = true;
-        description = "Antonio Drumond";
-        extraGroups = [
-            "networkmanager"
-            "wheel"
-            "libvirtd"
-        ];
-        packages = with pkgs; [
-            kdePackages.kate
-        ];
+    users = {
+        users.antonio = {
+            isNormalUser = true;
+            description = "Antonio Drumond";
+            extraGroups = [
+                "networkmanager"
+                "wheel"
+                "libvirtd"
+            ];
+            packages = with pkgs; [
+                kdePackages.kate
+            ];
+        };
+        users.puddo = {
+            group = "puddo";
+            isSystemUser = true;
+            description = "Davi Puddo";
+            extraGroups = [
+                "libvirtd"
+            ];
+        };
+        groups.puddo = {
+        };
     };
 
     programs = {
