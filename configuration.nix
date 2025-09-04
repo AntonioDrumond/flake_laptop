@@ -50,7 +50,7 @@
             ports = [ 22 ];
             settings = {
                 PasswordAuthentication = true;
-                AllowUsers = [ "puddo" ];
+                AllowUsers = [ "puddo" "antonio" ];
                 UseDns = true;
                 X11Forwarding = false;
                 PermitRootLogin = "no";
@@ -112,11 +112,11 @@
             ];
         };
         users.puddo = {
-            group = "puddo";
-            isSystemUser = true;
+            isNormalUser = true;
             description = "Davi Puddo";
             extraGroups = [
                 "libvirtd"
+                "wheel"
             ];
         };
         groups.puddo = {
