@@ -126,6 +126,7 @@
     programs = {
         # Firefox
         firefox.enable = true;
+        nano.enable = false;
 
         hyprland = {
             enable = true;
@@ -173,7 +174,7 @@
         allowUnfree = true;
         permittedInsecurePackages = [ "ventoy-1.1.05" ];
         # Necessary for android studio
-        android_sdk.accept_license = true;
+        # android_sdk.accept_license = true;
     };
 
     fonts.packages = with pkgs; [
@@ -198,8 +199,15 @@
     };
 
     # Fix wayland usage
-    environment.sessionVariables.NIXOS_OZONE_WL = "1";
-    environment.sessionVariables.GDK_BACKEND = "wayland,x11";
+    environment.sessionVariables = {
+        NIXOS_OZONE_WL = "1";
+        GDK_BACKEND = "wayland,x11";
+        GDK_SCALE = 1;
+        QT_SCALE_FACTOR = "1.0";
+        QT_AUTO_SCALE_FACTOR = "1.0";
+        QT_QPA_PLATFORM = "wayland;xcb";
+        QT_QPA_PLATFORMTHEME = "qt6ct";
+    };
 
     # Global system packages
     environment.systemPackages = with pkgs; [
@@ -273,7 +281,7 @@
         floorp
         mars-mips
         jflap
-        android-studio-full
+        # android-studio-full
     ];
 
     environment.localBinInPath = true;
