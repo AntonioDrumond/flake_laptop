@@ -56,6 +56,7 @@
                 PermitRootLogin = "no";
             }; 
         };
+        thermald.enable = true;
     };
 
     # Configure console keymap
