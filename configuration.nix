@@ -57,6 +57,12 @@
             }; 
         };
         thermald.enable = true;
+        flatpak = {
+            enable = true;
+            packages = [
+                { appId = "net.waterfox.waterfox"; origin = "flathub"; }
+            ];
+        };
     };
 
     # Configure console keymap
