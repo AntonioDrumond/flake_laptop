@@ -57,25 +57,28 @@
             }; 
         };
         thermald.enable = true;
+        printing.enable = true;
         flatpak = {
             enable = true;
             packages = [
                 { appId = "net.waterfox.waterfox"; origin = "flathub"; }
             ];
         };
+        blueman.enable = true;
+        logind.powerKey = "suspend";
     };
 
     # Configure console keymap
     console.keyMap = "br-abnt2";
 
-    # Enable CUPS to print documents.
-    services.printing.enable = true;
-
     # Bluetooth
     hardware.bluetooth = {
         enable = true;
         powerOnBoot = true;
+        input.General.ClassicBondedOnly = false;
     };
+
+    hardware.brillo.enable = true;
 
     # Enable sound
     security.rtkit.enable = true;
