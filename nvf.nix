@@ -416,6 +416,7 @@ in {
             { key = "L"; action = "$"; mode = ["n"]; silent = true; }
             { key = "<CR>"; action = "<nop>"; mode = ["n"]; silent = true; }
             { key = "<C-e>"; action = ":Neotree toggle right<CR>"; mode = ["n"]; silent = false; }
+            { key = "<C-gs>"; action = ":Gitsigns toggle_signs<CR>"; mode = ["n"]; silent = false; }
 
             
 
