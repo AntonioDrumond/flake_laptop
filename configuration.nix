@@ -153,7 +153,7 @@
             ];
         };
 
-# Starship
+        # Starship
         starship = {
             enable = true;
             settings = {
@@ -236,6 +236,14 @@
         # neovim
         # inputs.nixvim.packages.${pkgs.system}.default # NixVim
 
+        #CLI -> Pretty and shiny :D
+        bat
+        tree
+        eza # -> better to do in programs. but couldnt yet
+        neofetch
+        # superfile
+        yazi
+
         # Hyprland
         waybar
         hyprcursor
@@ -243,13 +251,6 @@
         hyprpaper
         hypridle
         rofi-wayland
-
-        #CLI -> Pretty and shiny :D
-        bat
-        tree
-        eza # -> better to do in programs. but couldnt yet
-        neofetch
-        superfile
 
         #Image stuff
         pix
