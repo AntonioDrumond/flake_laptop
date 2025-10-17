@@ -138,6 +138,7 @@
         firefox.enable = true;
         nano.enable = false;
 
+        # Hyprland
         hyprland = {
             enable = true;
             xwayland.enable = true;
@@ -286,11 +287,11 @@
         blueman
 
         #Other
-        # git-credential-manager
         kdePackages.kcalc
         cava
         floorp
         mars-mips
+        rars
         jflap
         # android-studio-full
     ];
