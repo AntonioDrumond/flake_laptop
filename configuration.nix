@@ -178,6 +178,11 @@
             };
         };
 
+        appimage = {
+            enable = true;
+            binfmt = true;
+        };
+
     };
 
     # Allow unfree packages
@@ -240,9 +245,9 @@
         #CLI -> Pretty and shiny :D
         bat
         tree
-        eza # -> better to do in programs. but couldnt yet
+        eza
         neofetch
-        # superfile
+        fastfetch
         yazi
 
         # Hyprland
