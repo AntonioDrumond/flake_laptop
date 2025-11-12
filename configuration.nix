@@ -41,7 +41,7 @@
         desktopManager.plasma6.enable = true;
         xserver = {
             enable = true;
-            wacom.enable = true;
+            # wacom.enable = true;
             xkb.layout = "br";
             xkb.variant = "nodeadkeys";
         };
@@ -79,6 +79,7 @@
     };
 
     hardware.brillo.enable = true;
+    hardware.opentabletdriver.enable = true;
 
     # Enable sound
     security.rtkit.enable = true;
@@ -216,13 +217,13 @@
 
     # Fix wayland usage
     environment.sessionVariables = {
-        NIXOS_OZONE_WL = "1";
+        # NIXOS_OZONE_WL = "1";
         GDK_BACKEND = "wayland,x11";
         GDK_SCALE = 1;
         QT_SCALE_FACTOR = "1.0";
         QT_AUTO_SCALE_FACTOR = "1.0";
         QT_QPA_PLATFORM = "wayland;xcb";
-        QT_QPA_PLATFORMTHEME = "qt6ct";
+        # QT_QPA_PLATFORMTHEME = "qt6ct";
     };
 
     # Global system packages
