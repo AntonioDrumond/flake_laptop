@@ -19,8 +19,8 @@ config.initial_cols = 80
 config.background = {
 	{
 		source = {
-			File = "Pictures/islands.jpg",
-			--File = 'Pictures/streetlamp.jpg',
+			--File = "Pictures/islands.jpg",
+			File = 'Pictures/fuji.jpg',
 			--File = '',
 		},
 		height = "Cover",
