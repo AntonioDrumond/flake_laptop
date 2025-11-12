@@ -13,14 +13,14 @@
                 kdePackages.kate
             ];
         };
-    };
-    users.puddo = {
-        isNormalUser = true;
-        description = "Davi Puddo";
-        extraGroups = [
-            "libvirtd"
-            "wheel"
-        ];
+        users.puddo = {
+            isNormalUser = true;
+            description = "Davi Puddo";
+            extraGroups = [
+                "libvirtd"
+                "wheel"
+            ];
+        };
     };
 
     networking = {
