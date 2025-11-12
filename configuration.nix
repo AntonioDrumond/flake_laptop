@@ -71,15 +71,21 @@
     # Configure console keymap
     console.keyMap = "br-abnt2";
 
-    # Bluetooth
-    hardware.bluetooth = {
-        enable = true;
-        powerOnBoot = true;
-        input.General.ClassicBondedOnly = false;
+    hardware = {
+        # Screen brightness control
+        brillo.enable = true;
+
+        # Drawing tablet drivers
+        opentabletdriver.enable = true;
+        
+        # Bluetooth
+        bluetooth = {
+            enable = true;
+            powerOnBoot = true;
+            input.General.ClassicBondedOnly = false;
+        };
     };
 
-    hardware.brillo.enable = true;
-    hardware.opentabletdriver.enable = true;
 
     # Enable sound
     security.rtkit.enable = true;
@@ -137,6 +143,8 @@
     programs = {
         # Firefox
         firefox.enable = true;
+
+        # Begone satan master of all deceit
         nano.enable = false;
 
         # Hyprland
@@ -179,6 +187,7 @@
             };
         };
 
+        # Enable appimage support
         appimage = {
             enable = true;
             binfmt = true;
