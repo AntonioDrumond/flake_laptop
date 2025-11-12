@@ -23,8 +23,8 @@
             nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
                 specialArgs = { inherit inputs; };
                 modules = [
-                    # Import configuration.nix file
-                    ./configuration.nix
+                    # Import configuration
+                    ./config
                     # NVF module and config file
                     nvf.nixosModules.default
                     ./nvf.nix
