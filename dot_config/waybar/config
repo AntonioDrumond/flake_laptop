@@ -3,8 +3,6 @@
     "position": "top",
     "margin-bottom": -10,
     "spacing" : 0,
-    "on-sigusr1": "hide",
-    "on-sigusr2": "show",
 
     "modules-left": [
     "hyprland/workspaces",
