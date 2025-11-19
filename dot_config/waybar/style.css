@@ -107,6 +107,7 @@
 #pulseaudio,
 #backlight,
 #network,
+#custom-coffee,
 #custom-lock,
 #battery {
   background-color: #161616;
@@ -122,6 +123,7 @@
 #pulseaudio:hover,
 #backlight:hover,
 #network:hover,
+#custom-coffee:hover,
 #custom-lock:hover,
 #battery:hover {
   background-color: #565656;
@@ -187,6 +189,13 @@
 }
 #battery.warning:not(.charging) {
   color: #ff237f;
+}
+
+#custom-coffee.ON {
+    color: #f7f7f7;
+}
+#custom-coffee.OFF {
+    color: #888888;
 }
 
 /* --- Tooltip Styles --- */

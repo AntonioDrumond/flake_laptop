@@ -1,0 +1,33 @@
+#!/bin/sh
+
+CUR_MONTH=$(timedatectl | head -n1 | cut -d'-' -f2)
+CUR_YEAR=$(timedatectl | head -n1 | cut -d'-' -f1 | cut -d' ' -f19)
+
+loop() {
+	clear
+	cal $CUR_MONTH $CUR_YEAR
+	read -sn1 x
+	if [ "$x" == "l" ]; then
+
+		CUR_MONTH=$(( $CUR_MONTH + 1 ))
+		if [ "$CUR_MONTH" -gt 12 ]; then
+			CUR_MONTH=1
+			CUR_YEAR=$(( $CUR_YEAR + 1 ))
+		fi
+		loop
+
+	elif [ "$x" == "h" ]; then
+
+		CUR_MONTH=$(( $CUR_MONTH - 1 ))
+		if [ "$CUR_MONTH" -lt 1 ]; then
+			CUR_MONTH=12
+			CUR_YEAR=$(( $CUR_YEAR - 1 ))
+		fi
+		loop
+ 
+	elif [ "$x" != "q" ] && [ "$x" != "" ]; then
+		loop
+	fi
+}
+loop
+exit

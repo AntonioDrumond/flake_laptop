@@ -1,0 +1,32 @@
+#!/bin/sh
+
+if [ ! -f /tmp/coffee_state ]; then
+	echo "ON" > /tmp/coffee_state
+fi
+
+FILE=$(cat /tmp/coffee_state)
+
+function print_status
+{
+	echo "{\"text\": \"\", \"alt\": \"none\", \"tooltip\": \"\", \"class\": \"$FILE\"}"
+}
+
+if [ "$1" == "-s" ]; then
+	print_status
+	while true; do
+		OTHER=$(cat /tmp/coffee_state)
+		if [ "$OTHER" != "$FILE" ]; then
+			FILE=$OTHER
+			print_status
+		fi
+		sleep .25
+	done
+elif [ "$FILE" == "ON" ]; then
+	echo "OFF" > /tmp/coffee_state 
+	hypridle
+
+elif [ "$FILE" == "OFF" ]; then
+	echo "ON" > /tmp/coffee_state 
+	killall hypridle
+	sleep 1
+fi

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 pos_threshold=60
-vel_threshold=175
+vel_threshold=225
 status=0
 open=0
 
