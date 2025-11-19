@@ -76,6 +76,7 @@
         mars-mips
         rars
         jflap
+        prismlauncher
         # android-studio-full
     ];
 

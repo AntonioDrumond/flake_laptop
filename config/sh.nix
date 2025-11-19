@@ -23,6 +23,7 @@
                 # palette = "catppuccin_${"mocha"}";
             };
         };
+        fish.enable = true;
     };
 
     environment.localBinInPath = true;

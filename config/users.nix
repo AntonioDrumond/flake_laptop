@@ -12,6 +12,7 @@
             packages = with pkgs; [
                 kdePackages.kate
             ];
+            shell = pkgs.fish;
         };
         users.puddo = {
             isNormalUser = true;
@@ -24,7 +25,7 @@
     };
 
     networking = {
-        hostName = "nixos"; 
+        hostName = "antonio-laptop"; 
         networkmanager.enable = true;
     };
 
@@ -40,5 +41,6 @@
                 PermitRootLogin = "no";
             };
         };
+        tailscale.enable = true;
     };
 }
