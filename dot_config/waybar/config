@@ -29,6 +29,13 @@
             }
         },
 
+        "backlight": {
+            // "format": "{icon}",
+            "format": "{icon} : {percent}%",
+            "format-icons": ["","󰃜", "󰃛", "󰃞","󰃝","󰃟","󰃠"],
+            "tooltip-format": "{percent}%"
+        },
+
         "bluetooth": {
             "format": "󰂲",
             "format-on": "{icon}",
