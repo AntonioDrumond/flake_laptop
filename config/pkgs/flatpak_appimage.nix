@@ -4,6 +4,7 @@
         enable = true;
         packages = [
             { appId = "net.waterfox.waterfox"; origin = "flathub"; }
+            { appId = "com.stremio.Stremio"; origin = "flathub"; }
         ];
     };
 

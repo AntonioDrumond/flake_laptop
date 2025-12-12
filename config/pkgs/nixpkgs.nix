@@ -2,7 +2,7 @@
 {
     nixpkgs.config = {
         allowUnfree = true;
-        permittedInsecurePackages = [ "ventoy-1.1.05" ];
+        permittedInsecurePackages = [ "ventoy-1.1.07" ];
     };
 
     environment.systemPackages = with pkgs; [
@@ -51,7 +51,6 @@
         # mullvad
 
         #Nonfree entertainment
-        stremio
         discord
         spotify
 
@@ -72,7 +71,6 @@
         #Other
         kdePackages.kcalc
         cava
-        floorp
         mars-mips
         rars
         jflap
@@ -84,7 +82,7 @@
     fonts.packages = with pkgs; [
         noto-fonts
         noto-fonts-cjk-sans
-        noto-fonts-emoji
+        noto-fonts-color-emoji
         liberation_ttf
         fira-code
         fira-code-symbols
