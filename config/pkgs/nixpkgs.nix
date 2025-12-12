@@ -34,7 +34,7 @@
         hyprshot
         hyprpaper
         hypridle
-        rofi-wayland
+        rofi
 
         #Image stuff
         pix

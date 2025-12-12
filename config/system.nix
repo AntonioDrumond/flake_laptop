@@ -17,7 +17,7 @@
     services = {
         thermald.enable = true;
         printing.enable = true;
-        logind.powerKey = "suspend";
+        logind.settings.Login.HandlePowerKey = "suspend";
     };
 
     hardware = {

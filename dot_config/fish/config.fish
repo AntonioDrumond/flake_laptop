@@ -9,9 +9,9 @@ if status is-interactive
 
     # OS Utils
     # alias nixconf='sudo -E vim /etc/nixos/configuration.nix'
-    alias rebSwitch='sudo nixos-rebuild switch --flake ~/repos/flake_laptop/'
-    alias rebBoot='sudo nixos-rebuild boot --flake ~/repos/flake_laptop/'
-    alias rebTest='sudo nixos-rebuild test --flake ~/repos/flake_laptop/'
+    alias rebSwitch='sudo nixos-rebuild switch --flake ~/repos/flake_laptop/#nixos'
+    alias rebBoot='sudo nixos-rebuild boot --flake ~/repos/flake_laptop/#nixos'
+    alias rebTest='sudo nixos-rebuild test --flake ~/repos/flake_laptop/#nixos'
 
     # Other
     alias la='ls -a'
