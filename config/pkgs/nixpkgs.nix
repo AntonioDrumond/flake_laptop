@@ -44,7 +44,7 @@
 
         #Non raw text
         obsidian
-        foliate
+        mcomix
 
         #Torrenting and stuff
         # qbittorrent
