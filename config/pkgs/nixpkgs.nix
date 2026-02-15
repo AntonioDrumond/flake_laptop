@@ -27,6 +27,7 @@
         neofetch
         fastfetch
         yazi
+        gemini-cli
 
         # Hyprland
         waybar
@@ -67,15 +68,20 @@
         brightnessctl
         playerctl
         blueman
+        distrobox
+
+        #Uni
+        wireshark
+        tshark
+        mars-mips
+        rars
+        jflap
 
         #Other
         kdePackages.kcalc
         cava
-        mars-mips
-        rars
-        jflap
         prismlauncher
-        # android-studio-full
+        google-chrome
     ];
 
 

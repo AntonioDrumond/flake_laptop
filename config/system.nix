@@ -27,6 +27,14 @@
         brillo.enable = true;
     };
 
+    virtualisation = {
+        podman = {
+            enable = true;
+            # dockerCompat = true;
+        };
+        docker.enable = true;
+    };
+
     # Bluetooth
     services.blueman.enable = true;
     hardware.bluetooth = {

@@ -13,6 +13,7 @@
             LC_PAPER = "pt_BR.UTF-8";
             LEPHONE = "pt_BR.UTF-8";
             LC_TIME = "pt_BR.UTF-8";
+            LANG = "en_US.UTF-8";
         };
     };
 
