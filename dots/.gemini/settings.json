@@ -1,0 +1,13 @@
+{
+  "model": {
+    "name": "gemini-3-pro-preview"
+  },
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    },
+    "folderTrust": {
+      "enabled": true
+    }
+  }
+}

@@ -28,5 +28,5 @@ if status is-interactive
     export EDITOR="vim"
 
     ## Completions
-    complete -c mkboiler -a "default.nix shell.nix nix_module mod.nix module.nix c cc cplusplus c++ cpp python13" -f
+    complete -c mkboiler -a "default.nix shell.nix nix_module mod.nix module.nix c cc cplusplus c++ cpp python13 rustshell rustShell rust_shell icedshell iced_shell icedShell" -f
 end
