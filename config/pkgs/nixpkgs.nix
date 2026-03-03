@@ -2,7 +2,7 @@
 {
     nixpkgs.config = {
         allowUnfree = true;
-        permittedInsecurePackages = [ "ventoy-1.1.07" ];
+        permittedInsecurePackages = [ "ventoy-1.1.10" ];
     };
 
     environment.systemPackages = with pkgs; [
@@ -10,6 +10,7 @@
         #CLI -> Essential
         vim
         git
+        gh
         wezterm
         fzf
         zip
@@ -44,7 +45,7 @@
         vlc
 
         #Non raw text
-        obsidian
+        # obsidian
         mcomix
 
         #Torrenting and stuff
