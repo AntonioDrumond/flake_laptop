@@ -13,5 +13,3 @@
 # to cache token:   git config --global credential.helper cache
 # to uncache token: git config --global --unset credential.helper
 
-[credential]
-	helper = cache

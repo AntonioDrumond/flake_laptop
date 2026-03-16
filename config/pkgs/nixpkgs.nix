@@ -17,6 +17,7 @@
         unzip
         rar
         unrar
+        tldr
         kitty
         killall
         # inputs.nixvim.packages.${pkgs.system}.default # NixVim
@@ -54,7 +55,7 @@
 
         #Nonfree entertainment
         discord
-        spotify
+        # spotify
 
         #Virtual Machine
         quickemu

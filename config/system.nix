@@ -12,6 +12,7 @@
         QT_SCALE_FACTOR = "1.0";
         QT_QPA_PLATFORM = "wayland;xcb";
         # QT_QPA_PLATFORMTHEME = "qt6ct";
+        EDITOR = "vim";
     };
 
     services = {
