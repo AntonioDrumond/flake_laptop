@@ -26,7 +26,6 @@
         bat
         tree
         eza
-        neofetch
         fastfetch
         yazi
         gemini-cli
