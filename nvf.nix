@@ -113,7 +113,13 @@ inputs.nvf.nixosModules.default
 
                     lua.enable = maxConfig;
                     bash.enable = true;
-                    clang.enable = true;
+
+                    clang = {
+                        enable = true;
+                        lsp.enable = true;
+                        treesitter.enable = true;
+                    };
+
                     css.enable = maxConfig;
                     html.enable = maxConfig;
                     sql.enable = true;

@@ -29,6 +29,7 @@
         fastfetch
         yazi
         gemini-cli
+        codex
 
         # Hyprland
         waybar
