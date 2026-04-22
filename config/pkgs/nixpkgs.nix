@@ -71,6 +71,7 @@
         playerctl
         blueman
         distrobox
+        networkmanagerapplet
 
         #Uni
         wireshark

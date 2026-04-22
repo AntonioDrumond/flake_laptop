@@ -170,7 +170,7 @@ inputs.nvf.nixosModules.default
                     lualine = {
                         enable = true;
                         # theme = "iceberg_dark"; # "catppuccin";
-                        theme = "catppuccin";
+                        # theme = "catppuccin";
                     };
                 };
 
