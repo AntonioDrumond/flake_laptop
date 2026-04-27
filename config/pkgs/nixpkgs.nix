@@ -85,6 +85,14 @@
         cava
         prismlauncher
         google-chrome
+
+        # Gnome
+        gnome-tweaks
+        gnome-extension-manager
+        gnomeExtensions.app-hider
+        gnomeExtensions.vitals
+        gnomeExtensions.dash-to-dock
+        gnomeExtensions.caffeine
     ];
 
 

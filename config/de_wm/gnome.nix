@@ -13,4 +13,3 @@
         gnome-user-docs
     ];
 }
-    
