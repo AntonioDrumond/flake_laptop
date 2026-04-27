@@ -72,6 +72,7 @@
         blueman
         distrobox
         networkmanagerapplet
+        tlp-pd
 
         #Uni
         wireshark

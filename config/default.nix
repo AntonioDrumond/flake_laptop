@@ -6,6 +6,7 @@
 
         ./hardware-configuration.nix
         ./system.nix
+        ./systemd-services.nix
         ./users.nix
         ./localization.nix
         ./audio.nix
