@@ -9,6 +9,6 @@
             xkb.variant = "nodeadkeys";
         };
     };
-    security.pam.services.sddm.kwallet.enable = false;
+    security.pam.services.sddm.kwallet.enable = true;
 }
     

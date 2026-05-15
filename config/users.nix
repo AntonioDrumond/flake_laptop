@@ -9,6 +9,7 @@
                 "wheel"
                 "docker"
                 "libvirtd"
+                "wireshark"
             ];
             packages = with pkgs; [
                 kdePackages.kate

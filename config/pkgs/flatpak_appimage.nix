@@ -6,6 +6,7 @@
             { appId = "net.waterfox.waterfox"; origin = "flathub"; }
             { appId = "com.stremio.Stremio"; origin = "flathub"; }
             { appId = "md.obsidian.Obsidian"; origin = "flathub"; }
+            { appId = "com.spotify.Client"; origin = "flathub"; }
         ];
     };
 

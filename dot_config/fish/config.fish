@@ -29,4 +29,11 @@ if status is-interactive
 
     ## Completions
     complete -c mkboiler -a "default.nix shell.nix nix_module mod.nix module.nix c cc cplusplus c++ cpp python13 rustshell rustShell rust_shell icedshell iced_shell icedShell" -f
+
+    ## Keybinds
+    if status is-interactive
+        bind \ez 'fg; commandline -f repaint'
+    end
+
+    bind \ea 'pwd > /tmp/anchor.txt'
 end

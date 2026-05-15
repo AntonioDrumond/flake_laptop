@@ -17,6 +17,7 @@
         unzip
         rar
         unrar
+        tldr
         kitty
         killall
         # inputs.nixvim.packages.${pkgs.system}.default # NixVim
@@ -25,10 +26,10 @@
         bat
         tree
         eza
-        neofetch
         fastfetch
         yazi
         gemini-cli
+        codex
 
         # Hyprland
         waybar
@@ -54,7 +55,7 @@
 
         #Nonfree entertainment
         discord
-        spotify
+        # spotify
 
         #Virtual Machine
         quickemu
@@ -70,6 +71,8 @@
         playerctl
         blueman
         distrobox
+        networkmanagerapplet
+        tlp-pd
 
         #Uni
         wireshark
@@ -83,6 +86,14 @@
         cava
         prismlauncher
         google-chrome
+
+        # Gnome
+        gnome-tweaks
+        gnome-extension-manager
+        gnomeExtensions.app-hider
+        gnomeExtensions.vitals
+        gnomeExtensions.dash-to-dock
+        gnomeExtensions.caffeine
     ];
 
 

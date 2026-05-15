@@ -14,5 +14,10 @@
                 proton-ge-bin
             ];
         };
+
+        wireshark = {
+            enable = true;
+            dumpcap.enable = true;
+        };
     };
 }
