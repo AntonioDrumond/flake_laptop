@@ -113,12 +113,18 @@ inputs.nvf.nixosModules.default
 
                     lua.enable = maxConfig;
                     bash.enable = true;
-                    clang.enable = true;
+
+                    clang = {
+                        enable = true;
+                        lsp.enable = true;
+                        treesitter.enable = true;
+                    };
+
                     css.enable = maxConfig;
                     html.enable = maxConfig;
                     sql.enable = true;
                     kotlin.enable = false;
-                    ts.enable = false;
+                    typescript.enable = false;
                     go.enable = true;
                     zig.enable = false;
                     typst.enable = false;
@@ -142,7 +148,6 @@ inputs.nvf.nixosModules.default
                     ruby.enable = false;
                     fsharp.enable = false;
 
-                    tailwind.enable = false;
                     svelte.enable = false;
                 };
 
@@ -327,6 +332,11 @@ inputs.nvf.nixosModules.default
                     toggleterm = {
                         enable = true;
                         lazygit.enable = true;
+                        setupOpts = {
+                            direction = "float";
+                            shell = "fish";
+                            winbar.enabled = false;
+                        };
                     };
                 };
 
