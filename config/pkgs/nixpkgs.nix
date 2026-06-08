@@ -73,6 +73,7 @@
         distrobox
         networkmanagerapplet
         tlp-pd
+        nvtopPackages.intel
 
         #Uni
         wireshark
