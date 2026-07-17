@@ -7,6 +7,7 @@
             "/etc/zoneinfo:ro"
             "/etc/static/zoneinfo:ro"
         ];
+        overrides.global.Environment.TZDIR = "/etc/zoneinfo";
         packages = [
             { appId = "net.waterfox.waterfox"; origin = "flathub"; }
             { appId = "com.stremio.Stremio"; origin = "flathub"; }
