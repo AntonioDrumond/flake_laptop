@@ -100,7 +100,12 @@ inputs.nvf.nixosModules.default
                         };
                     };
 
-                    java.enable = maxConfig;
+                    java = {
+                        enable = true;
+                        lsp.enable = true;
+                        treesitter.enable = true;
+                    };
+
                     csharp.enable = maxConfig;
                     python.enable = maxConfig;
                     yaml.enable = true;
