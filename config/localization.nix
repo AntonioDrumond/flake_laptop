@@ -3,6 +3,7 @@
     time.timeZone = "America/Sao_Paulo";
     time.hardwareClockInLocalTime = true;
     # time.timeZone = "Etc/GMT+3";
+    environment.variables.TZDIR = "/etc/zoneinfo";
     environment.sessionVariables.TZDIR = "/etc/zoneinfo";
     i18n = {
         defaultLocale = "en_US.UTF-8";
