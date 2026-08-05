@@ -2,12 +2,7 @@
 {
     services.flatpak = {
         enable = true;
-        overrides.global.Context.filesystems = [
-            "/etc/localtime:ro"
-            "/etc/zoneinfo:ro"
-            "/etc/static/zoneinfo:ro"
-        ];
-        overrides.global.Environment.TZDIR = "/etc/zoneinfo";
+        overrides.global.Environment.TZ = ":/run/host/monitor/localtime";
         packages = [
             { appId = "net.waterfox.waterfox"; origin = "flathub"; }
             { appId = "com.stremio.Stremio"; origin = "flathub"; }
