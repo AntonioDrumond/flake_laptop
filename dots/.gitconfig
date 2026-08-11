@@ -10,6 +10,9 @@
 [url "https://github.com/davipuddo/"]
     insteadOf = "dfp:"
 
+[url "https://github.com/TeoMAraujo/"]
+    insteadOf = "teo:"
+
 # to cache token:   git config --global credential.helper cache
 # to uncache token: git config --global --unset credential.helper
 

@@ -1,5 +1,7 @@
 {
   "/home/antonio/.gemini": "TRUST_FOLDER",
   "/home/antonio/repos/nanvix/nanvix": "TRUST_FOLDER",
-  "/home/antonio/Desktop/nanvix": "TRUST_FOLDER"
+  "/home/antonio/Desktop/nanvix": "TRUST_FOLDER",
+  "/home/antonio/Documents/vault/safe": "TRUST_FOLDER",
+  "/home/antonio/repos/Arq3-TP1": "DO_NOT_TRUST"
 }

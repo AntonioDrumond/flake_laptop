@@ -74,6 +74,7 @@
         networkmanagerapplet
         tlp-pd
         nvtopPackages.intel
+        glaze
 
         #Uni
         wireshark
