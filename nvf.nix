@@ -272,11 +272,6 @@ inputs.nvf.nixosModules.default
                     gitsigns.codeActions.enable = false; # throws an annoying debug message
                 };
 
-                minimap = {
-                    minimap-vim.enable = false;
-                    codewindow.enable = maxConfig; # lighter, faster, and uses lua for configuration
-                };
-
                 dashboard = {
                     dashboard-nvim.enable = false;
                     alpha.enable = maxConfig;

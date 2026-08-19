@@ -3,9 +3,9 @@
 
     inputs = {
         stable.url = "github:NixOS/nixpkgs/nixos-26.05";
-        #nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+        nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
         #nixpkgs.url = "github:nixos/nixpkgs?rev=0b9e82138431f31772b103d3957994fb254dd5e8";
-        nixpkgs.url = "github:nixos/nixpkgs?rev=4b1cd35e951dd2760cf83fe5bf5129d26464ae31";
+        # nixpkgs.url = "github:nixos/nixpkgs?rev=4b1cd35e951dd2760cf83fe5bf5129d26464ae31";
         #nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
 
         # nixvim.url = "github:AntonioDrumond/nixvim";
