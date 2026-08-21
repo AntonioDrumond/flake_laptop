@@ -1,4 +1,7 @@
 { pkgs, ... }:
+let
+    quartus-prime-lite-16 = pkgs.callPackage ./quartus-prime-lite-16.nix { };
+in
 {
     nixpkgs.config = {
         allowUnfree = true;
@@ -81,6 +84,7 @@
         mars-mips
         rars
         jflap
+        quartus-prime-lite-16
 
         #Other
         kdePackages.kcalc
