@@ -29,6 +29,7 @@
         fastfetch
         yazi
         codex
+        antigravity-cli
 
         # Hyprland
         waybar
