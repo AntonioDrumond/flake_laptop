@@ -88,6 +88,8 @@
         cava
         prismlauncher
         google-chrome
+        obs-studio
+        quartus-prime-lite
 
         # Gnome
         gnome-tweaks
