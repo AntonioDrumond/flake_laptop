@@ -1,0 +1,1 @@
+nix-shell /home/antonio/.local/bin/bobsShell.nix

@@ -1,0 +1,9 @@
+echo "Current generations:"
+echo ""
+sudo sudo nix-env --list-generations --profile /nix/var/nix/profiles/system
+echo ""
+echo "For deleting old versions do:"
+echo "|-------------------------------------------------|"
+echo "| sudo nix-collect-garbage --delete-older-than 2d |"
+echo "|-------------------------------------------------|"
+echo "or just the flag --delete-old"

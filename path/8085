@@ -1,0 +1,1 @@
+nix-shell -p zulu --run "java -jar /home/antonio/ACJars/8085Compiler_v1_0.jar"

@@ -1,0 +1,3 @@
+cd /home/antonio/repos/bobs8085/
+# git remote add org https://github.com/cart-pucminas/bobs8085
+git push org --force

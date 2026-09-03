@@ -1,0 +1,3 @@
+t=$(cat /home/antonio/.local/bin/Theldo.face)
+printf "$t" | awk 'BEGIN{RS=""; FS="\n"} {for(i=1; i<=NF; i++) {print $i; fflush(); system("sleep .1")}}'
+printf "\n\"Nós podemos fazer mais...\"\n"

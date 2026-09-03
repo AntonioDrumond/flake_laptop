@@ -1,0 +1,1 @@
+nix-shell -p zulu --run "java -jar /home/antonio/ACJars/Logisim_v2_16_1_4.jar"

@@ -15,7 +15,6 @@ if status is-interactive
 
     # Other
     alias la='ls -a'
-    alias obp='obipull'
     alias nix-shell="nix-shell --run fish"
 
     # Ricing

@@ -1,0 +1,4 @@
+cd ~/Documents/vault
+git add ~/Documents/vault/.
+git commit -m "obi"
+git push

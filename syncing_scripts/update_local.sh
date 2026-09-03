@@ -13,5 +13,7 @@ cp .bashrc /home/antonio/
 cp .gitconfig /home/antonio/
 cp .vimrc /home/antonio/
 cp .wezterm.lua /home/antonio/
-cp ./.gemini/trustedFolders.json /home/antonio/.gemini/
-cp ./.gemini/settings.json /home/antonio/.gemini/
+
+# .local/bin/
+cd /home/antonio/repos/flake_laptop/path
+cp ./* /home/antonio/.local/bin/
