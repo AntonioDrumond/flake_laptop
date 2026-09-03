@@ -20,6 +20,7 @@
         tldr
         kitty
         killall
+        hyperfine
         # inputs.nixvim.packages.${pkgs.system}.default # NixVim
 
         #CLI -> Pretty and shiny :D
