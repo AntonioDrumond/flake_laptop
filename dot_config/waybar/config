@@ -1,7 +1,7 @@
 {
     "layer": "overlay",
         "position": "top",
-        "margin-bottom": -10,
+        "margin-bottom": -2,
         "spacing" : 0,
 
         "modules-left": [
