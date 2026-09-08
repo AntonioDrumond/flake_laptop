@@ -283,15 +283,23 @@ hl.layer_rule({
 ]]--
 
 hl.window_rule({
-	name = "supress-maximize-events",
-	match = {
+    name = "supress-maximize-events",
+    match = {
         class = ".*"
     },
-	suppress_event = "maximize",
+    suppress_event = "maximize",
+})
+
+hl.window_rule({
+    name = "float qemu",
+    match = {
+        title = "QEMU",
+    },
+    float = true,
 })
 
 hl.window_rule {
-	name = "fix-xwayland-drags",
+    name = "fix-xwayland-drags",
     match = {
         class = "^$",
         title = "^$",
@@ -300,7 +308,7 @@ hl.window_rule {
         fullscreen = true,
         pin = true,
     },
-	no_focus = true
+    no_focus = true
 }
 
 -- Bluetooth

@@ -31,6 +31,9 @@
         yazi
         codex
         antigravity-cli
+        claude-code
+        claude-monitor
+        putty
 
         # Hyprland
         waybar
